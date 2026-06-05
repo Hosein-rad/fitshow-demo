@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: #0a0a0a;
+  color: #ededed;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*  فاصله ها*/
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto 5rem auto;
+}
+
+.section-tag {
+  display: inline-block;
+  background: rgba(244, 67, 54, 0.15);
+  color: #f2a4a4;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c6c6c6 0%, #f94646 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-header p {
+  color: #a3a3a3;
+  font-size: 1.1rem;
+}
+
+.white-tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fa837a;
+}
+
+/*  دکمه ها و لینک ها*/
+.btn-primary,
+.btn-primary-large,
+.btn-outline,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 60px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: #9a1f16;
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  box-shadow: 0 8px 20px rgba(244, 67, 54, 0.25);
+}
+
+.btn-primary:hover {
+  background: #d32f2f;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(244, 67, 54, 0.35);
+}
+
+.btn-primary-large {
+  background: #f44336;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary-large:hover {
+  background: #d32f2f;
+  transform: scale(1.02);
+}
+
+.btn-outline {
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 0.9rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(244, 67, 54, 0.2);
+  border-color: #f44336;
+}
+
+/* ========== سربرگ ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo a {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  color: white;
+}
+
+.logo span {
+  color: #f44336;
+  margin-left: 3px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 1rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active-nav {
+  color: #f44336;
+}
+
+/* ========== قسمت اول (hero) ========== */
+.hero {
+  position: relative;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMWExYTsgc3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDAwMDAwOyBzdG9wLW9wYWNpdHk6MC45IiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48L3N2Zz4="),
+    linear-gradient(145deg, #0a0a8c 0%, #030303 100%);
+  background-size: cover;
+  background-blend-mode: overlay;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 80% 30%,
+    rgba(244, 67, 54, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #f0b3ae;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #bcbcbc;
+  max-width: 550px;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero-stats {
+  justify-content: center;
+  display: flex;
+  gap: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.8rem;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-stats span:first-child {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f44336;
+}
+
+/* ========== قسمت ویژگی ها ========== */
+.features {
+  background: #0c0c0c;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  background: #111111;
+  border: 1px solid #242424;
+  border-radius: 28px;
+  padding: 2rem 1.8rem;
+  transition: transform 0.2s ease, border-color 0.2s;
+}
+
+.feature-card:hover {
+  border-color: #f44336;
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 5rem;
+  color: #f44336;
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #adadad;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* ========== قسمت کلاس ها ========== */
+.classes {
+  background: #070707;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.class-card {
+  background: #121212;
+  border-radius: 28px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+.class-img-placeholder {
+  background: linear-gradient(135deg, #3a3a3a, #0b0b0b);
+  padding: 2.2rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #f44336;
+}
+
+.class-info {
+  padding: 1.8rem;
+}
+
+.class-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.class-info p {
+  color: #aaa;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.class-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #f44336;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s;
+}
+
+.class-link:hover {
+  gap: 12px;
+}
+
+/* ========== cta عضویت رایگان ========== */
+.cta-membership {
+  background: linear-gradient(112deg, #090909 0%, #2c2c2c 100%);
+  border-radius: 32px;
+  margin: 2rem 0 2rem 0;
+}
+
+.cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
+}
+
+.cta-text {
+  flex: 1;
+}
+
+.cta-text h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.cta-text p {
+  color: #bfbfbf;
+  margin-bottom: 2rem;
+}
+
+.cta-feature-list ul {
+  list-style: none;
+}
+
+.cta-feature-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 500;
+}
+
+.cta-feature-list i {
+  color: #f35e54;
+  font-size: 1.3rem;
+}
+
+/* ========== پابرگ ========== */
+.site-footer {
+  background: #030303;
+  border-top: 1px solid #1f1f1f;
+  padding: 3rem 0 0 0;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand p {
+  color: #9c9c9c;
+  line-height: 1.5;
+}
+
+.logo-footer {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  background: #1e1e1e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: white;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #f44336;
+  transform: translateY(-3px);
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #b0b0b0;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #f44336;
+}
+
+.footer-newsletter p {
+  color: #a0a0a0;
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  padding: 0.8rem;
+  border-radius: 60px 0 0 60px;
+  outline: none;
+  color: white;
+  font-family: inherit;
+}
+
+.newsletter-form button {
+  background: #f44336;
+  border: none;
+  padding: 0 1.2rem;
+  border-radius: 0 60px 60px 0;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.newsletter-form button:hover {
+  background: #d32f2f;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #181818;
+  font-size: 0.8rem;
+  color: #6e6e6e;
+}
+
+/* ========== RESPONSIVE (mobile friendly) ========== */
+@media (max-width: 980px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .main-nav ul {
+    gap: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-feature-list ul {
+    text-align: left;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.3rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-primary,
+  .btn-secondary {
+    justify-content: center;
+  }
+  .features-grid,
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    gap: 2rem;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .newsletter-form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero-stats span:first-child {
+    font-size: 1.4rem;
+  }
+}
