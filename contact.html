@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="تماس با فیت‌شو - آدرس، شماره تماس، فرم درخواست مشاوره"
+    />
+    <title>تماس با فیت‌شو | باشگاه بدنسازی حرفه‌ای</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* استایل اضافی مختص تماس با ما*/
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .contact-info {
+        background: #111;
+        border-radius: 28px;
+        padding: 2rem;
+        border: 1px solid #242424;
+      }
+      .contact-info i {
+        color: #f44336;
+        width: 2rem;
+        font-size: 1.3rem;
+      }
+      .contact-info .info-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-form {
+        background: #111;
+        border-radius: 28px;
+        padding: 2rem;
+        border: 1px solid #242424;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        text-align: right;
+        background: #1e1e1e;
+        border: 1px solid #333;
+        padding: 0.8rem;
+        border-radius: 16px;
+        color: white;
+        font-family: inherit;
+        margin-bottom: 1rem;
+      }
+      .contact-form textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      .social-icons i {
+        color: white;
+      }
+      .map-container {
+        margin: 2rem 0 3rem;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid #242424;
+      }
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--  سربرگ -->
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="#">فیتــ‌<span>شو</span></a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/index.html">خانه</a></li>
+            <li><a href="/about.html">درباره ما</a></li>
+            <li><a href="/contact.html" class="active-nav">تماس با ما</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="#join" class="btn-outline">همین حالا ثبت‌نام کن</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- بخش عنوان ساده (بدون هیروی بزرگ) -->
+      <div class="container" style="margin-top: 3rem; text-align: center">
+        <span class="section-tag">ارتباط با ما</span>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem">
+          همیشه در کنار شما هستیم
+        </h1>
+        <p style="color: #aaa">
+          سوال یا پیشنهادی داری؟ فقط کافیه با ما در ارتباط باشی.
+        </p>
+      </div>
+
+      <!-- بخش 2 ردیفه اطلاعات + فرم -->
+      <div class="container">
+        <div class="contact-grid">
+          <!-- ستون راست: اطلاعات -->
+          <div class="contact-info">
+            <h3
+              style="
+                margin-bottom: 1rem;
+                text-align: center;
+                border-bottom: 1px solid black;
+                font-size: 2rem;
+              "
+            >
+              اطلاعات تماس
+            </h3>
+            <div class="info-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>تهران، خیابان ولیعصر، پلاک ۴۵، مجتمع ورزشی فیت‌شو</span>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-phone-alt"></i> <span>۰۲۱-۲۲۳۳۵۵۴۴</span>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-mobile-alt"></i> <span>۰۹۱۲۱۲۳۴۵۶۷</span>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-envelope"></i> <span>info@fitshow.ir</span>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-clock"></i>
+              <span
+                >شنبه تا پنجشنبه: ۸ صبح تا ۱۱ شب<br />جمعه‌ها: ۹ صبح تا ۹
+                شب</span
+              >
+            </div>
+            <div
+              class="social-icons"
+              style="
+                margin-top: 2rem;
+                justify-content: flex-start;
+                text-align: center;
+              "
+            >
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- ستون چپ: فرم تماس -->
+          <div class="contact-form">
+            <h3
+              style="
+                margin-bottom: 1rem;
+                text-align: center;
+                border-bottom: 1px solid black;
+                font-size: 2rem;
+              "
+            >
+              ارسال پیام
+            </h3>
+            <form action="#" method="post">
+              <input type="text" placeholder="نام و نام خانوادگی" required />
+              <input type="email" placeholder="ایمیل" required />
+              <input type="tel" placeholder="شماره تماس (اختیاری)" />
+              <textarea placeholder="پیام شما..." required></textarea>
+              <button
+                type="submit"
+                class="btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                ارسال پیام <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- قسمت نقشه آدرس -->
+      <div class="container">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.563274985104!2d51.389037!3d35.689197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0146b3b5b5b5%3A0x0!2zMzXCsDQxJzIxLjEiTiA1McKwMjMnMjAuMyJF!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen="true"
+            loading="lazy"
+            title="نقشه باشگاه بدنسازی فیت‌شو"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <!-- بخش سوالات متداول (اختیاری، با استفاده از کلاس‌های موجود) -->
+      <section class="features" style="padding: 2rem 0">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">سوالات متداول</span>
+            <h2>پاسخ به چند سوال رایج</h2>
+          </div>
+          <div
+            class="features-grid"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 1.5rem;
+            "
+          >
+            <div class="feature-card">
+              <h3>آیا جلسه رایگان دارید؟</h3>
+              <p>
+                بله، تمام اعضای جدید می‌توانند یک جلسه تمرینی رایگان با مشاوره
+                اولیه داشته باشند.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>ساعت کاری باشگاه چطور است؟</h3>
+              <p>همه روزه از ۸ صبح تا ۱۱ شب، جمعه‌ها از ۹ صبح تا ۹ شب.</p>
+            </div>
+            <div class="feature-card">
+              <h3>آیا مربی شخصی دارد؟</h3>
+              <p>بله، می‌توانید جلسات خصوصی با مربیان مجرب ما رزرو کنید.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== پابرگ ========== -->
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo logo-footer">فیتــ‌<span>شو</span></div>
+          <p>مرزهای خود را جابجا کن</p>
+          <p>
+            <br /><i class="fas fa-location-dot"></i>
+            تهران، خیابان ولیعصر، پلاک ۴۵، مجتمع ورزشی فیت‌شو
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="اینستاگرام"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="فیسبوک"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="تیک تاک"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>اکتشاف</h4>
+          <ul>
+            <li><a href="#">پلن‌های عضویت</a></li>
+            <li><a href="#">تمرینات شخصی</a></li>
+            <li><a href="#">کلاس‌های گروهی</a></li>
+            <li><a href="#">رزرو تور باشگاه</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>پشتیبانی</h4>
+          <ul>
+            <li><a href="#">سوالات متداول</a></li>
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">قوانین حریم خصوصی</a></li>
+            <li><a href="#">فرصت‌های شغلی</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>عضویت در خبرنامه</h4>
+          <p>نکات تمرینی، پیشنهادات ویژه و رویدادها را دریافت کن.</p>
+          <form class="newsletter-form">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            <input type="email" placeholder="آدرس ایمیل شما" required />
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>1405© - تمامی حقوق برای باشگاه <u>فیت‌شو</u> محفوظ است</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
